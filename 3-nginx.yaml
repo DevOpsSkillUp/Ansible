@@ -1,5 +1,6 @@
-- name : install and run nginx
+- name: install and run nginx
   hosts: web
+  become: yes # -b like root
   tasks: #task
   - name: installing the nginx
     ansible.builtin.package:     
@@ -10,3 +11,4 @@
     ansinle.builtin.package:
       name: nginx
       state: started
+      enable: yes
