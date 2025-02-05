@@ -1,0 +1,6 @@
+- name: Hello
+  hosts: web
+  tasks: #task
+  - name: Pirnt Hello Program
+    ansible.builtin.debug:
+    msg: "Hello Program"
