@@ -2,9 +2,10 @@
   hosts: web
   tasks: #task
   - name: installing the nginx
-    ansible.builtin.package:
-      name: ngix
+    ansible.builtin.package:     
+      name: nginx
       state: present
+      use: auto
   - name: start the nginx
     ansinle.builtin.package:
       name: nginx
