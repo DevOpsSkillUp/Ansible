@@ -1,6 +1,5 @@
 - name: PING
-  hosts: wed
+  hosts: web
   tasks: #collabration/module/
   - name: ansible ping the server
     ansible.builtin.ping:
-
