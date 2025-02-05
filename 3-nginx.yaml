@@ -5,7 +5,6 @@
     ansible.builtin.package:
       name: ngix
       state: present
-      use: auto
   - name: start the nginx
     ansinle.builtin.package:
       name: nginx
