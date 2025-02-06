@@ -3,7 +3,7 @@
   become: yes # -b for root access
   tasks:
   - name: install nginx
-    ansible.builtin.package:
+    ansible.builtin.package:          # search like ansible install package
       name: nginx
       state: present
       use: auto
