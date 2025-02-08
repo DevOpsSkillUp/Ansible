@@ -6,11 +6,6 @@
     DURATION: 120HRS
     TRAINER: Sivakumar
   tasks:
-    -name: print the variable
+  - name: Pirnt Hello Program
     ansible.builtin.debug:
-      msg: "Course is DevOps with AWS, Duration of learing is 120hrs, Trainer is SelfLearnings"
-
-
-
-
-
+      msg: "Hello Program"
