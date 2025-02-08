@@ -2,6 +2,6 @@
   hosts: local
   connection: local
   tasks:
-    - name: print variables from inventory file
-      asnible.builtin.debug:
-        msg: "Course name is {{ COURSE }} and Course duration is {{ DURATION }} and the trainer is {{ TRAINER }}"
+  - name: print variables from inventory file
+    asnible.builtin.debug:
+      msg: "Course name is {{ COURSE }} and Course duration is {{ DURATION }} and the trainer is {{ TRAINER }}"
