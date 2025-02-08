@@ -4,7 +4,7 @@
   vars_prompt:
     - name: Name
       prompt: "Enter the User name"
-      private: no
+      private: no    # we can use yes/no and true/false
     - name: Password
       prompt: "Enter the Password"
   tasks:
