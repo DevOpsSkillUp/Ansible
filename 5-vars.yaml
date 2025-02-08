@@ -1,0 +1,19 @@
+- name: variables
+  hosts: local
+  connection: local
+  vars: #Play level variables
+    course: "DevOps with AWS"
+    duration: 120hrs
+    trainer: "SelfLearnings"
+  tasks:
+    - name: print the variable
+      ansible.buildin.debug:
+        msg: "Course is DevOps with AWS, Duration of learing is 120hrs, Trainer is SelfLearnings"
+    - name: print the variable  from task level variables
+      var: #task level variables
+        course: "Ansible"
+      ansible.buildin.debug:
+        msg: "Course is {{ course }}, Duration of learing is {{ duration }}, Trainer is {{ trainer }}"
+    - name: print the variable from play level variables defined
+      ansible.buildin.debug:
+        msg: "Course is {{ course }}, Duration of learing is {{ duration }}, Trainer is {{ trainer }}"
