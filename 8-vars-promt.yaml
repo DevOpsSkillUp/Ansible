@@ -1,12 +1,12 @@
 - name: varaibles from promt 
   hosts: local
   connection: local
-  vars_promt:
+  vars_prompt:
     - name: Name
       prompt: "Enter the User name"
     - name: Password
       prompt: "Enter the Password"
   tasks:
-    - name: print the varaibles from promt
-      ansible.builtin.debug:
-        msg: "The User name is {{ Name }}
+  - name: print the varaibles from promt
+    ansible.builtin.debug:
+      msg: "The User name is {{ Name }}
