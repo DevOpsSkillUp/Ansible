@@ -7,7 +7,7 @@
       msg: "Hello from Play1 and Task1"
 
 - name: Play2
-  hosts: local
+  hosts: local2
   connection: local # mange the local machine no need of any connection or server or credentials
   tasks:
   - name: Play2 and Task2
