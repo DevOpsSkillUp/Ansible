@@ -1,7 +1,7 @@
 - name: variables
   hosts: local
   connection: local
-  vars:
+  vars: #play level variables
     COURSE: "DevOps with AWS"
     DURATION: 120HRS
     TRAINER: Sivakumar
@@ -9,11 +9,12 @@
   - name: Pirnt the variable
     ansible.builtin.debug:
       msg: "Course is DevOps with AWS, Duration of learing is 120hrs, Trainer is SelfLearnings"
-  - name: print the variable
+  - name: print the variable from task level
     vars: #task level variables
       COURSE: "Ansible"
-      DURATION: 30HRS
-      TRAINER: Sivakumar
+    ansible.builtin.debug:
+      msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
+  - name: print the variable from play level
     ansible.builtin.debug:
       msg: "Course is {{ COURSE }}, Duration is {{ DURATION }}, Trainer is {{ TRAINER }}"
 
