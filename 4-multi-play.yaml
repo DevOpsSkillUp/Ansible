@@ -6,11 +6,11 @@
     ansible.builtin.debug:
       msg: "Hello from Play1 and Task1"
 
-#- name: Play2
-#  hosts: local2
-#  conection: local
-#  tasks:
-#    - name: Play2 and task2
-#      ansible-buildin.debug:
-#        msg: "Hello messages from Play2 and Task2"
+- name: Play2
+  hosts: local2
+  conection: local2
+  tasks:
+    - name: Play2 and task2
+      ansible-buildin.debug:
+        msg: "Hello messages from Play2 and Task2"
     
