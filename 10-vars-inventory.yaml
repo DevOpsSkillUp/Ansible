@@ -1,5 +1,5 @@
 - name: vars in inventory
-  hosts: web
+  hosts: web  # run for both hosts local and remote
   tasks:
   - name: print the variables from inventory.ini
     ansible.builtin.debug:
