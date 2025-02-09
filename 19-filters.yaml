@@ -2,6 +2,15 @@
   hosts: local
   connection: local
   tasks:
-  - name: Using filters 
+  - name: Using default filter 
     ansible.builtin.debug:
       msg: "I am {{ name | default('John') }}"
+  - name: convert to uppercase
+    ansible.builtin.debug:
+      msg: "I am {{ name | upper }}"
+  - name: convert to lowercase
+    ansible.builtin.debug:
+      msg: "I am {{ name | lower }}"
+  - name: capitalize
+    ansible.builtin.debug:
+      msg: "I am {{ name | capitalize }}"
