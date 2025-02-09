@@ -7,11 +7,11 @@
       name: "{{ item }}"
       state: present    #we can use present/installed   or absent/removed
     loop:
-      - {name": 'php', state: 'absent' }
-      - {name": 'vim', state: 'absent' }
+      - { name: 'php', state: 'absent' }
+      - { name: 'vim', state: 'absent' }
       - { name: 'git', state: 'removed' }
-      - {name": 'java', state: 'removed' }
+      - { name: 'java', state: 'removed' }
       - { name: 'git', state: 'present' }
-      - {name": 'php', state: 'present' }
-      - {name": 'vim', state: 'installed' }
-      - {name": 'java', state: 'installed' }
+      - { name: 'php', state: 'present' }
+      - { name: 'vim', state: 'installed' }
+      - { name: 'java', state: 'installed' }
