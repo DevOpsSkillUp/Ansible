@@ -71,4 +71,8 @@
       numbers: [1, 2, 3, 4, 5]
     ansible.builtin.debug:
       msg: "Min: {{ numbers | min }} Max: {{ numbers | max }}"
-  
+  - name: Ip addredd is validate or not
+    vars:
+      ip: 200.2222.222.222
+    ansible.builtin.debug:
+      msg: "The IP address is {{ip|ansible.utils.ipaddr}}"  
