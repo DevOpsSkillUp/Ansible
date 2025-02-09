@@ -1,10 +1,10 @@
 - name: data types
   hosts: local
   connection: local
-  vars:
+  vars: #map/dictionary {}
     cours_name: "DevOps with AWS"  #String
     fee: 5000 #Number
-    topics: #list
+    topics: #list  []
     - Linux
     - Shell Scripting
     - Ansible
@@ -12,7 +12,7 @@
     - Kubernetes
     - AWS
     live: true   #Boolean
-    tools:     #Dictionary/map
+    tools:     #Dictionary/map {}
       ci: Jenkins
       cloud: AWS
       scm: Git
