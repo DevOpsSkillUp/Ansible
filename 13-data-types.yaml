@@ -1,0 +1,26 @@
+- name: data types
+  hosts: local
+  Cconnection: local
+  vars:
+    cours_name: "DevOps with AWS"  #String
+    fee: 5000 #Number
+    topics: #list
+    - Linux
+    - Shell Scripting
+    - Ansible
+    - Docker
+    - Kubernetes
+    - AWS
+    live: true   #Boolean
+    tools:     #Dictionary/map
+      ci: Jenkins
+      cloud: AWS
+      scm: Git
+      container: Docker
+      monitoring: Grafana
+  tasks:
+  - name: print the information of the course
+    ansible.builtin.debug:
+      msg: "Hello I am learning  {{ cours_name }}, Fee is : {{ fee }},  Topics are : {{ topics }} is it Live?: {{ live }} Tools are {{ tools }}"
+
+

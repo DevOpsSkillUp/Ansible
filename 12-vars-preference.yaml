@@ -11,16 +11,16 @@
     private: false
   tasks: #task levelvariables
   - name: print the variable
-    #vars:
-    #  GREET: "TASK"
+    vars:
+      GREET: "TASK"
     ansible.builtin.debug:
       msg: "Hello from {{ GREET }}"
 
-#1. Command line or args
-#2. Task level
-#3. Files
-#4. Prompt
-#5. Play
-#6. Inventory
-#7. Roles
-
+#The order of precedence of variables in ansible is as follows:
+  #1. Command line or args
+  #2. Task level
+  #3. Course.yaml Files
+  #4. Prompt
+  #5. Play
+  #6. Inventory
+  #7. Roles
