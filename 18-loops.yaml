@@ -5,9 +5,9 @@
   - name: install packages in Node from server ec2-user
     ansible.builtin.package:
       name: "{{ item }}"
-      state: installed    #we can use present/installed   or absent/removed
-    with_items:
-      - mysql
-      - git 
-      - vim
-      - python3
+      state: present    #we can use present/installed   or absent/removed
+    loop:
+      - ruby
+      - php
+      - java
+      - jenkins
