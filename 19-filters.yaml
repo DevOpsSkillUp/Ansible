@@ -29,3 +29,10 @@
       - {'key': 'banana', value: 2 }
     ansible.builtin.debug:
       msg: "I like {{ fruits | items2dict }}"
+  - name: convert from list to dictionary
+    vars:
+      fruits:
+      - apple
+      - banana
+    ansible.builtin.debug:
+      msg: "I like {{ fruits | items2dict }}"
