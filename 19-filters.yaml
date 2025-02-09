@@ -71,6 +71,10 @@
       numbers: [1, 2, 3, 4, 5]
     ansible.builtin.debug:
       msg: "Min: {{ numbers | min }} Max: {{ numbers | max }}"
+  - name: install netaddr
+    ansible.builtin.package:
+      name: python-netaddr
+      state: present
   - name: Ip addredd is validate or not
     vars:
       ip: 200.2222.222.222
