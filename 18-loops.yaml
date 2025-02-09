@@ -1,7 +1,6 @@
 - name: install packages
   hosts: web
   become: yes
-  become: yes
   tasks:
   - name: install packages in Node from server ec2-user
     ansible.builtin.package:
