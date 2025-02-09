@@ -4,5 +4,9 @@
   tasks:
   - name: executing ls command module # It will work beacuse ls is present in command module if not present then it will not work
     ansible.builtin.command: ls
+    register: output
   - name: executing ls shell module
     ansible.builtin.shell: ls -ltr > /tmp/output.txt
+  - name: print the output of command module
+    ansible.builtin.debug:
+      msg: "{{ output.stdout }}"
