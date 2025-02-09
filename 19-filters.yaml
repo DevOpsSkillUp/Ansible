@@ -15,3 +15,17 @@
       fruits: ["apple", "banana", "orange"] # list
     ansible.builtin.debug:
       msg: "I like {{ fruits | join(',') }}"
+  - name: convert from  map to list
+    vars:
+      fruits:
+        apple: 1
+        banana: 2
+    ansible.builtin.debug:
+      msg: "I like {{ fruits | dict2items }}"
+  - name: convert from list to map
+    vars:
+      fruits:
+        - { key: 'apple', value: 1 }
+        - { key: 'banana', value: 2 }
+    ansible.builtin.debug:
+      msg :"I like {{ fruits | items2dict }}"
