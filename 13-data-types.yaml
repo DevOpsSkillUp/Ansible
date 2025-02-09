@@ -1,6 +1,6 @@
 - name: data types
   hosts: local
-  Cconnection: local
+  connection: local
   vars:
     cours_name: "DevOps with AWS"  #String
     fee: 5000 #Number
