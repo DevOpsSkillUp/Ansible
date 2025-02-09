@@ -25,7 +25,7 @@
   - name: convert from list to map
     vars:
       fruits:
-        - { key: 'apple', value: 1 }
-        - { key: 'banana', value: 2 }
+      - {'key': 'apple', 'value': 1}
+      - {'key': 'banana', value: 2 }
     ansible.builtin.debug:
-      msg :"I like {{ fruits | items2dict }}"
+      msg: "I like {{ fruits | items2dict }}"
