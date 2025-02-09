@@ -66,14 +66,9 @@
       name: "John"
     ansible.builtin.debug:
       msg: "I am {{ name | replace('John', 'Doe') }}" 
-  - name: convert to slice
-    vars:
-      name: "John Doe"
-    ansible.builtin.debug:
-      msg: "I am {{ name | slice(0, 4) }}"
   - name: convert to trim
     vars:
-      name: " John R. Doe "
+      name: " John Doe "
     ansible.builtin.debug:
       msg: "I am {{ name | trim }}"
   
