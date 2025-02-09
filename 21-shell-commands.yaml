@@ -9,4 +9,4 @@
     ansible.builtin.shell: ls -ltr > /tmp/output.txt
   - name: print the output of command module
     ansible.builtin.debug:
-      msg: "{{ output.stdout }}"
+      msg: "{{ output }}"
