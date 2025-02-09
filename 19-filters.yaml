@@ -36,3 +36,44 @@
       - {'key': 'banana', value: 2 }
     ansible.builtin.debug:
       msg: "I like {{ fruits | items2dict }}"
+  - name: convert to uppercase
+    vars:
+      name: "John"
+    ansible.builtin.debug:
+      msg: "I am {{ name | upper }}"
+  - name: convert to lowercase
+    vars:
+      name: "John"
+    ansible.builtin.debug:
+      msg: "I am {{ name | lower }}"
+  - name: convert to title case
+    vars:
+      name: "john doe"
+    ansible.builtin.debug:
+      msg: "I am {{ name | title }}"
+  - name: convert to capitalize
+    vars:
+      name: "john doe"
+    ansible.builtin.debug:
+      msg: "I am {{ name | capitalize }}"
+  - name: convert to reverse
+    vars:
+      name: "John"
+    ansible.builtin.debug:
+      msg: "I am {{ name | reverse }}"
+  - name: convert to replace
+    vars:
+      name: "John"
+    ansible.builtin.debug:
+      msg: "I am {{ name | replace('John', 'Doe') }}" 
+  - name: convert to slice
+    vars:
+      name: "John Doe"
+    ansible.builtin.debug:
+      msg: "I am {{ name | slice(0, 4) }}"
+  - name: convert to trim
+    vars:
+      name: " John R. Doe "
+    ansible.builtin.debug:
+      msg: "I am {{ name | trim }}"
+  
