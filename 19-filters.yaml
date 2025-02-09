@@ -5,12 +5,15 @@
   - name: Using default filter 
     ansible.builtin.debug:
       msg: "I am {{ name | default('John') }}"
-  - name: convert to uppercase
+
+  - name: convert from string to list 
+    vars:
+      fruits: "apple,banana,orange" # string
     ansible.builtin.debug:
-      msg: "I am {{ name | upper }}"
-  - name: convert to lowercase
+      msg: "I like {{ fruits | split(',') }}"
+
+  - name: convert from list to string
+    vars:
+      fruits: ["apple", "banana", "orange"] # list
     ansible.builtin.debug:
-      msg: "I am {{ name | lower }}"
-  - name: capitalize
-    ansible.builtin.debug:
-      msg: "I am {{ name | capitalize }}"
+      msg: "I like {{ fruits | join(',') }}"
