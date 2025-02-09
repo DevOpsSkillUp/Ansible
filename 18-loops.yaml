@@ -5,7 +5,7 @@
   - name: install packages in Node from server ec2-user
     ansible.builtin.package:
       name: "{{ item }}"
-      state: present    #we can use present/install   or absent/remove
+      state: remove    #we can use present/install   or absent/remove
     with_items:
       - mysql
       - git 
