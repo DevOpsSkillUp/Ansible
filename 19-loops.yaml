@@ -14,4 +14,4 @@
       - { name: 'git', state: 'present' }
       - { name: 'php', state: 'present' }
       - { name: 'vim', state: 'installed' }
-      - { name: 'java', state: 'installed' }
+      - { name: 'java', state: 'installed' } 

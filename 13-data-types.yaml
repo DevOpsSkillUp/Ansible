@@ -22,5 +22,3 @@
   - name: print the information of the course
     ansible.builtin.debug:
       msg: "Hello I am learning  {{ cours_name }}, Fee is : {{ fee }},  Topics are : {{ topics }} is it Live?: {{ live }} Tools are {{ tools }}"
-
-

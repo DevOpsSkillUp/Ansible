@@ -10,4 +10,4 @@
   tasks:
   - name: print the varaibles from promt
     ansible.builtin.debug:
-      msg: "The User name is {{ Name }}"
+      msg: "The User name is {{ Name }}" 

@@ -37,7 +37,7 @@
     ansible.builtin.debug:
       msg: "I like {{ fruits | items2dict }}"
   - name: convert to uppercase
-    vars:
+    vars: 
       name: "John"
     ansible.builtin.debug:
       msg: "I am {{ name | upper }}"
