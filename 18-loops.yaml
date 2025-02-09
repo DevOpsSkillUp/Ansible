@@ -1,0 +1,13 @@
+- name: install packages
+  hosts: web
+  become: yes
+  tasks:
+  - name: install packages in Node from server ec2-user
+    ansible.buitin.package:
+      name: "{{ item }}"
+      state: present    #we can use present/install   or absent/remove
+    with_items:
+      - mysql
+      - git 
+      - vim
+      - python3
