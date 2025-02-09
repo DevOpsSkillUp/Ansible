@@ -1,0 +1,9 @@
+- name: Install nginx
+  hosts: web
+  become: yes
+  tasks:
+  - name: Install nginx
+    ansinble.builtin.dnf:
+      name: nginx
+      state: installed
+    when: ansible_os_family == 'RedHat'
