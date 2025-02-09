@@ -2,16 +2,14 @@
   hosts: local
   connection: local
   tasks:
-  - name: Using default filter 
+  - name: Handle undefined variable
     ansible.builtin.debug:
       msg: "I am {{ name | default('John') }}"
-
   - name: convert from string to list 
     vars:
       fruits: "apple,banana,orange" # string
     ansible.builtin.debug:
       msg: "I like {{ fruits | split(',') }}"
-
   - name: convert from list to string
     vars:
       fruits: ["apple", "banana", "orange"] # list
