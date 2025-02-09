@@ -66,9 +66,9 @@
       name: "John"
     ansible.builtin.debug:
       msg: "I am {{ name | replace('John', 'Doe') }}" 
-  - name: convert to trim
+  - name: print min and max
     vars:
-      name: " John Doe "
+      numbers: [1, 2, 3, 4, 5]
     ansible.builtin.debug:
-      msg: "I am {{ name | trim }}"
+      msg: "Min: {{ numbers | min }} Max: {{ numbers | max }}"
   
