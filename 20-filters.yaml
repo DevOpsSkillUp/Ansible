@@ -5,16 +5,19 @@
   - name: Handle undefined variable
     ansible.builtin.debug:
       msg: "I am {{ name | default('John') }}"
+
   - name: convert from string to list 
     vars:
       fruits: "apple,banana,orange" # string
     ansible.builtin.debug:
       msg: "I like {{ fruits | split(',') }}"
+
   - name: convert from list to string
     vars:
       fruits: ["apple", "banana", "orange"] # list
     ansible.builtin.debug:
       msg: "I like {{ fruits | join(',') }}"
+    
   - name: convert from  map to list
     vars:
       fruits:
@@ -22,6 +25,7 @@
         banana: 2
     ansible.builtin.debug:
       msg: "I like {{ fruits | dict2items }}"
+
   - name: convert from list to map
     vars:
       fruits:
@@ -29,6 +33,8 @@
       - {'key': 'banana', value: 2 }
     ansible.builtin.debug:
       msg: "I like {{ fruits | items2dict }}"
+
+    
   - name: convert from list to dictionary
     vars:
       fruits:

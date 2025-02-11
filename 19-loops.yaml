@@ -5,7 +5,7 @@
   - name: install packages in Node from server ec2-user
     ansible.builtin.package:
       name: "{{ item.name }}"
-      state: "{{ item.state }}"    #we can use present/installed   or absent/removed
+      state: "{{ item.state }}"    #we can use present/installed  or absent/removed
     loop:
       - { name: 'php', state: 'absent' }
       - { name: 'vim', state: 'absent' }
