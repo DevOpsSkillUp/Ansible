@@ -44,10 +44,10 @@
     amazon.aws.route53:
       state: present
       zone: "{{ Zone }}"
-      record: "{{ item.item }}.{{ Zone }}"
-      type: A
-      ttl: 1
+      #record: "{{ item.item }}.{{ Zone }}"
+      #type: A
+      #ttl: 1
       value: "{{ item.instances[0].private_ip_address }}"
-      wait: true
-      overwite: true
+      #wait: true
+      #overwite: true
     loop: "{{ ec2_info.results }}"
