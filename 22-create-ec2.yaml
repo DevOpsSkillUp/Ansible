@@ -2,11 +2,11 @@
   hosts: local
   connection: local
   vars:
-    subnet_id: subnet-04c451dd811fac84b
-    securitygroup_id: sg-021077680fed85f05
-    ami_id: ami-09c813fb71547fc4f
-    instance_type: t2.micro
-    instances:
+    Subnet_Id: subnet-04c451dd811fac84b
+    Securitygroup_Id: sg-021077680fed85f05
+    AMI_Id: ami-09c813fb71547fc4f
+    Instance_Type: t2.micro
+    Instances:
     - mysql
     - backend
     - frontend
@@ -14,8 +14,8 @@
   - name: Create ec2 instance
     amazon.aws.ec2_instance:
       name: "{{ item }}"
-      Subnet_Id: "{{ subnet_id }}"
-      Security_Id: "{{ securitygroup_id }}"
-      Image_Id: "{{ ami_id }}"
-      Instance_Type: "{{ instance_type }}"
-    loop: "{{ instances }}"
+      subnet_id: "{{ Subnet_Id }}"
+      security_id: "{{ Securitygroup_Id }}"
+      image_id: "{{ AMI_Id }}"
+      instance_type: "{{ Instance_Type }}"
+    loop: "{{ Instances }}"
