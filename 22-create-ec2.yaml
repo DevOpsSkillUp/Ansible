@@ -6,6 +6,7 @@
     Securitygroup_Id: sg-021077680fed85f05
     AMI_Id: ami-09c813fb71547fc4f
     Instance_Type: t2.micro
+    Zone: devops-project.site
     Instances:
     - mysql
     - backend
@@ -33,7 +34,20 @@
   #   ansible.builtin.debug:
   #     msg : "{{ ec2_info }}"
 
-  - name: print private IP address
-    ansible.builtin.debug:
-      msg: "{{ item.instances[0].network_interfaces[0].private_ip_addresses[0].private_ip_address }}"
+  # - name: print private IP address
+  #   ansible.builtin.debug:
+  #     msg: "{{ item.instances[0].private_ip_address }}"
+  #   loop: "{{ ec2_info.results }}"
+
+  
+  - name: Creating route 53 records with private IP
+    amazon.aws.route53:
+      state: present
+      zone: "{{ Zone }}"
+      record: "{{ item.item }}.{{ Zone }}"
+      type: A
+      ttl: 1
+      value: "{{ item.instances[0].private_ip_address }}"
+      wait: true
+      overwite: true
     loop: "{{ ec2_info.results }}"
