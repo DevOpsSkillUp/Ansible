@@ -2,7 +2,7 @@
   hosts: local
   connection: local
   vars:
-    Subnet_Id: subnet-04c451dd811fac84b
+    Subnet_Id: subnet-0e0394605783eefba
     Securitygroup_Id: sg-021077680fed85f05
     AMI_Id: ami-09c813fb71547fc4f
     Instance_Type: t2.micro
