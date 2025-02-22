@@ -1,0 +1,8 @@
+- name: install nginx
+  hosts: nginx
+  become: yes # -b for root access
+  tasks:
+  - name: install nginx
+    ansible.builtin.package:          # search like ansible install package
+      name: nginx
+      state: present
