@@ -31,6 +31,7 @@
     loop: "{{ Instances }}"
     register: ec2_info
 
+
   # - name: print ec2 info
   #   ansible.builtin.debug:
   #     msg : "{{ ec2_info }}"
@@ -40,7 +41,6 @@
   #     msg: "{{ item.instances[0].private_ip_address }}"
   #   loop: "{{ ec2_info.results }}"
 
-  
   - name: Creating route 53 records with private IP
     amazon.aws.route53:
       state: present
